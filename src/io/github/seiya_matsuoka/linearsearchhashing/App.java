@@ -1,6 +1,9 @@
 package io.github.seiya_matsuoka.linearsearchhashing;
 
+import io.github.seiya_matsuoka.linearsearchhashing.runner.DequeRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.LinkedListRunner;
+import io.github.seiya_matsuoka.linearsearchhashing.runner.QueueRunner;
+import io.github.seiya_matsuoka.linearsearchhashing.runner.StackRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.TopicRunner;
 
 /**
@@ -48,6 +51,9 @@ public final class App {
   private static TopicRunner createRunner(String topic) {
     return switch (topic) {
       case "linked-list" -> new LinkedListRunner();
+      case "stack" -> new StackRunner();
+      case "queue" -> new QueueRunner();
+      case "deque" -> new DequeRunner();
       default -> null;
     };
   }
@@ -61,6 +67,9 @@ public final class App {
     System.out.println();
     System.out.println("利用可能な topic");
     System.out.println("  linked-list   連結リストの基礎");
+    System.out.println("  stack         スタックの基礎");
+    System.out.println("  queue         キューの基礎");
+    System.out.println("  deque         デックの基礎");
     System.out.println();
     System.out.println("利用可能なオプション");
     System.out.println("  --topic <name>    実行対象のトピックを指定する");
