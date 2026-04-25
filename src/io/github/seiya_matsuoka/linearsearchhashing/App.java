@@ -1,6 +1,8 @@
 package io.github.seiya_matsuoka.linearsearchhashing;
 
+import io.github.seiya_matsuoka.linearsearchhashing.runner.BinarySearchRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.DequeRunner;
+import io.github.seiya_matsuoka.linearsearchhashing.runner.LinearSearchRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.LinkedListRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.QueueRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.StackRunner;
@@ -54,6 +56,8 @@ public final class App {
       case "stack" -> new StackRunner();
       case "queue" -> new QueueRunner();
       case "deque" -> new DequeRunner();
+      case "linear-search" -> new LinearSearchRunner();
+      case "binary-search" -> new BinarySearchRunner();
       default -> null;
     };
   }
@@ -66,10 +70,12 @@ public final class App {
             + " [options]");
     System.out.println();
     System.out.println("利用可能な topic");
-    System.out.println("  linked-list   連結リストの基礎");
-    System.out.println("  stack         スタックの基礎");
-    System.out.println("  queue         キューの基礎");
-    System.out.println("  deque         デックの基礎");
+    System.out.println("  linked-list    連結リストの基礎");
+    System.out.println("  stack          スタックの基礎");
+    System.out.println("  queue          キューの基礎");
+    System.out.println("  deque          デックの基礎");
+    System.out.println("  linear-search  線形探索の基礎");
+    System.out.println("  binary-search  二分探索の基礎");
     System.out.println();
     System.out.println("利用可能なオプション");
     System.out.println("  --topic <name>    実行対象のトピックを指定する");
