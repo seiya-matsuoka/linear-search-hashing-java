@@ -2,9 +2,11 @@ package io.github.seiya_matsuoka.linearsearchhashing;
 
 import io.github.seiya_matsuoka.linearsearchhashing.runner.BinarySearchRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.DequeRunner;
+import io.github.seiya_matsuoka.linearsearchhashing.runner.HashTableRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.LinearSearchRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.LinkedListRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.QueueRunner;
+import io.github.seiya_matsuoka.linearsearchhashing.runner.SetMapRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.StackRunner;
 import io.github.seiya_matsuoka.linearsearchhashing.runner.TopicRunner;
 
@@ -58,6 +60,8 @@ public final class App {
       case "deque" -> new DequeRunner();
       case "linear-search" -> new LinearSearchRunner();
       case "binary-search" -> new BinarySearchRunner();
+      case "hash-table" -> new HashTableRunner();
+      case "set-map" -> new SetMapRunner();
       default -> null;
     };
   }
@@ -76,6 +80,8 @@ public final class App {
     System.out.println("  deque          デックの基礎");
     System.out.println("  linear-search  線形探索の基礎");
     System.out.println("  binary-search  二分探索の基礎");
+    System.out.println("  hash-table     ハッシュテーブルの基礎");
+    System.out.println("  set-map        Set / Map を使った探索・判定・集計");
     System.out.println();
     System.out.println("利用可能なオプション");
     System.out.println("  --topic <name>    実行対象のトピックを指定する");
